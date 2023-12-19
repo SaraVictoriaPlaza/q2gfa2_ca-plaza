@@ -1,0 +1,146 @@
+*{margin: 0;padding: 0; box-sizing: border-box; }
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 6dvh;
+    overflow-x: hidden;
+}
+
+a{text-decoration: none; color: white}
+a:visited{ text-decoration: underline;}
+header{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2dvh;
+    padding-bottom: 2dvh;
+    background: #1d1d1da1;
+    color: white;
+    position: fixed;
+    width: 100dvw;
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: 1.1rem;
+    
+}
+
+header{position: fixed; z-index: 98;}
+section{
+    height: 100dvh;
+    width: 100dvw;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+    overflow: hidden;
+    padding-top: 4vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+#stars {
+    background: rgb(0, 0, 0) url('../images/stars.jpg');
+    display: inline-block;
+    width: 100vw;
+    height: 100vh;
+    z-index: 81;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    animation: twinklingStars 5s infinite;
+}
+
+#greeting-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 99; 
+    color: rgb(114, 29, 29);
+}
+
+#greeting-text h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#greeting-text p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.planets {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 90;
+}
+
+#planet1 {
+    background-image: url(../images/planet1.gif);
+    width: 180px;
+    height: 180px;
+    animation: planet1motion 30s linear infinite;
+}
+
+#planet2 {
+    background-image: url(../images/planet2.gif);
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    animation: planet2motion 40s linear infinite;
+}
+
+#planet3 {
+    background-image: url(../images/planet4.gif);
+    width: 200px;
+    height: 200px;
+    animation: planet3motion 20s linear infinite;
+}
+
+#blackhole {
+    background-image: url(../images/blackhole.gif);
+    width: 20px;
+    height: 20px;
+    animation: blackholegrow 600s;
+    position: relative;
+    left:50vw;
+}
+
+#stars {
+    background: black url(../images/stars.jpg) ;
+    display: inline-block;
+    width: 100vw;
+    height: 100dvh;
+    z-index: 81;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+}
+
+
+@keyframes planet1motion {
+    0% {transform: translate(-300px, -300px) rotate(0deg) scale(1.5);}
+    50% {transform: translate(500px, 500px) rotate(180deg) scale(1);}
+    100% {transform: translate(1400px, 1000px) rotate(360deg) scale(0.5);}
+}
+
+@keyframes planet2motion {
+    0% {transform: translate(-100px, -100px) scale(1.5);}
+    100% {transform: translate(1000px, 400px) scale(0.5);}
+}
+
+@keyframes planet3motion {
+    0% {transform: translate(100px, -100px) rotate(0deg) scale(1);}
+    100% {transform: translate(1200px, 1150px) rotate(360deg) scale(0);}
+}
+
+@keyframes blackholegrow {
+    0% {transform: scale(25) rotate(90deg);}
+    100% {transform: scale(0) rotate(0deg);}
+}
+
+@keyframes twinklingStars {
+    0%, 100% {opacity: 0.5;}
+    50% {opacity: 1;}
+}
+
