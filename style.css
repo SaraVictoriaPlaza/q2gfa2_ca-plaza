@@ -35,7 +35,7 @@ section{
 }
 
 #stars {
-    background: rgb(0, 0, 0) url('../images/stars.jpg');
+    background: rgb(0, 0, 0) url('images/stars.jpg');
     display: inline-block;
     width: 100vw;
     height: 100vh;
@@ -76,14 +76,14 @@ section{
 }
 
 #planet1 {
-    background-image: url(../images/planet1.gif);
+    background-image: url('images/planet1.gif');
     width: 180px;
     height: 180px;
     animation: planet1motion 30s linear infinite;
 }
 
 #planet2 {
-    background-image: url(../images/planet2.gif);
+    background-image: url('images/planet2.gif');
     width: 140px;
     height: 140px;
     position: absolute;
@@ -91,14 +91,14 @@ section{
 }
 
 #planet3 {
-    background-image: url(../images/planet4.gif);
+    background-image: url('images/planet4.gif');
     width: 200px;
     height: 200px;
     animation: planet3motion 20s linear infinite;
 }
 
 #blackhole {
-    background-image: url(../images/blackhole.gif);
+    background-image: url('images/blackhole.gif');
     width: 20px;
     height: 20px;
     animation: blackholegrow 600s;
@@ -107,7 +107,7 @@ section{
 }
 
 #stars {
-    background: black url(../images/stars.jpg) ;
+    background: black url('images/stars.jpg') ;
     display: inline-block;
     width: 100vw;
     height: 100dvh;
